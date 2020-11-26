@@ -42,7 +42,7 @@ gem 'autoprefixer-rails', '8.6.5'
 gem 'rubocop', '~> 1.2', require: false
 gem 'rspec-rails', '~> 4.0.1'
 gem 'factory_bot_rails'
-
+gem 'activerecord-import'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
