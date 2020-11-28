@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="text-center font-weight-bold"><%= t('.title') %></h1>
+
+<table class='table table-striped  table-dark table-bordered mt-5'>
+  <thead>
+    <tr>
+      <td class="align-middle text-center font-weight-bold"><%= t('.table.discipline') %></td>
+      <td class="align-middle text-center font-weight-bold"><%= t('.table.quantity') %></td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @questions.each do |discipline, quantity| %>
+      <tr>
+        <td class="align-middle"><%= discipline %></td>
+        <td class="align-middle"><%= number_with_delimiter(quantity, delimiter: ".") %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @questions %>
+
+<%= link_to t('.question_access'), question_accesses_path, class: 'btn btn-secondary'%>
+
+<br>
