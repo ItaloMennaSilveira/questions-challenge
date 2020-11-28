@@ -17,4 +17,11 @@
 //= jquery3
 //= popper
 //= bootstrap-sprockets
+//= require jquery
+//= require jquery_ujs
+//= require bootstrap.min
 //= bootstrap
+//= require bootstrap-datepicker
+//= require bootstrap-datepicker/core
+//= require bootstrap-datepicker/locales/bootstrap-datepicker.es.js
+//= require bootstrap-datepicker/locales/bootstrap-datepicker.fr.js
