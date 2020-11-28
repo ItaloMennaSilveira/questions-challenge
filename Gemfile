@@ -38,6 +38,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'autoprefixer-rails', '8.6.5'
+gem 'rails-i18n', '~> 5.1'
+gem 'kaminari'
+gem 'bootstrap-datepicker-rails'
 
 gem 'rubocop', '~> 1.2', require: false
 gem 'rspec-rails', '~> 4.0.1'
