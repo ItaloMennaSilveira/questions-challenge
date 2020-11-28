@@ -1,0 +1,21 @@
+<table class='table table-striped  table-dark table-bordered mt-5'>
+  <thead>
+    <tr>
+      <td class="align-middle text-center font-weight-bold"><%= t('.table.question') %></td>
+      <td class="align-middle text-center font-weight-bold"><%= t('.table.sum') %></td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% question_accesses.each do |question_with_sum| %>
+      <tr>
+        <td class="align-middle">
+          <%= "#{question_with_sum['question'].id} - #{question_with_sum['question'].discipline} - #{question_with_sum['question'].statement}" %>
+        </td>
+        <td class="align-middle"><%= number_with_delimiter(question_with_sum['sum'], delimiter: ".") %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate question_accesses %>
