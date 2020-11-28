@@ -1,7 +1,7 @@
 class QuestionAccess < ApplicationRecord
   belongs_to :question
 
-  scope :group_by_question, -> (question_id) { where(question_id: question_id) }
+  scope :group_by_question, ->(question_id) { where(question_id: question_id) }
   scope :sum_accesses, -> { sum(&:times_accessed) }
 
   def self.by_period(start_date, end_date)
@@ -29,6 +29,6 @@ class QuestionAccess < ApplicationRecord
       question_with_sum << obj
     end
 
-    question_with_sum.sort_by{ |o| o['sum'] }.reverse
+    question_with_sum.sort_by { |o| o['sum'] }.reverse
   end
 end

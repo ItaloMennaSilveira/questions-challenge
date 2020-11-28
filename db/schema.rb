@@ -10,29 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_26_015600) do
-
+ActiveRecord::Schema.define(version: 20_201_126_015_600) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "question_accesses", force: :cascade do |t|
-    t.datetime "date"
-    t.integer "times_accessed"
-    t.bigint "question_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["question_id"], name: "index_question_accesses_on_question_id"
+  create_table 'question_accesses', force: :cascade do |t|
+    t.datetime 'date'
+    t.integer 'times_accessed'
+    t.bigint 'question_id'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['question_id'], name: 'index_question_accesses_on_question_id'
   end
 
-  create_table "questions", force: :cascade do |t|
-    t.text "statement"
-    t.text "text"
-    t.string "answer"
-    t.integer "daily_access"
-    t.string "discipline"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'questions', force: :cascade do |t|
+    t.text 'statement'
+    t.text 'text'
+    t.string 'answer'
+    t.integer 'daily_access'
+    t.string 'discipline'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  add_foreign_key "question_accesses", "questions"
+  add_foreign_key 'question_accesses', 'questions'
 end
