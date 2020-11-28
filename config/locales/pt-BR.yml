@@ -1,0 +1,18 @@
+'pt-BR':
+  questions:
+    index:
+      title: Disciplinas das questões mais acessadas por disciplina
+      table:
+        discipline: Disciplina
+        quantity: Quantidade
+      question_access: Página de acesso de questões
+  question_accesses:
+    index:
+      title: Questões mais acessadas no período
+      question: Página de acesso de disciplinas
+      datepicker:
+        title: Selecione um período
+    question_accesses:
+      table:
+        question: Questão
+        sum: Somatório de acessos do período
