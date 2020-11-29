@@ -1,9 +1,9 @@
 FactoryBot.define do
   factory :question do
-    statement { 'MyText' }
-    text { 'MyText' }
-    answer { 'MyString' }
-    daily_access { 1 }
-    discipline { 'MyString' }
+    statement { Faker::Lorem.sentence }
+    text { Faker::Lorem.paragraph }
+    answer { 'A' }
+    daily_access { Faker::Number.between(from: 1, to: 100) }
+    discipline { "matematica" }
   end
 end
