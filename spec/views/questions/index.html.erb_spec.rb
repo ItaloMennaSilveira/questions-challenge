@@ -7,8 +7,4 @@ RSpec.describe 'questions/index', type: :view do
              Question.create!
            ])
   end
-
-  it 'renders a list of questions' do
-    render
-  end
 end

@@ -7,8 +7,4 @@ RSpec.describe 'question_accesses/index', type: :view do
              QuestionAccess.create!
            ])
   end
-
-  it 'renders a list of question_accesses' do
-    render
-  end
 end
