@@ -1,24 +1,42 @@
-# README
+# Challenge - Italo Menna Silveira
+## The Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The application has two models to model the solution where one is used for questions and the other for accesses. There are two screens that are used to show the two requested features:
+* Disciplines with most accessed questions in the last 24 hours, on `/questions`;
+* Questions most accessed by period, on `/question_accesses`.
 
-Things you may want to cover:
+## Requirements
+* Docker version 19.03.13
+* docker-compose version 1.25.4
 
-* Ruby version
+## Added Gems On Project
+* Activerecord-import - for insert a large amount of data in the base;
+* Bootstrap - for make small changes in the front end;
+* Bootstrap-datepicker - for select a range of dates;
+* DatabaseCleaner - for cleaner database after tests;
+* Factory Bot - for create factories to tests;
+* Faker - for create data fake;
+* i18n - for internacionalization of application;
+* JQuery - for manipulation of DOM;
+* Kaminari - for pagination on front end;
+* RSpec - for suite of tests;
+* Rubocop - for check the style guide;
+* Shoulda Callback Matchers - for tests with callbacks on model test;
+* Shoulda Matchers - for tests relation on model test.
 
-* System dependencies
+## Run Project
+On project folder run this command to build application:
 
-* Configuration
+```
+docker-compose build
+```
 
-* Database creation
+Run this command to up containers with database and web application:
+```
+docker-compose up
+```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To run tests:
+```
+docker-compose exec rails bundle exec rspec
+```
